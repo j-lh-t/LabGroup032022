@@ -23,30 +23,33 @@ namespace LabGroup
             if (Session["tk0"] != null) tbTK0.Text = Session["tk0"].ToString();
             if (Session["email0"] != null) tbEmail0.Text = Session["email0"].ToString();
             if (Session["email1"] != null) tbEmail1.Text = Session["email1"].ToString();
+
+            div_dk.Visible = false;
+            div_qmk.Visible = false;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            dk.Visible = true;
-            dn.Visible = false;
+            div_dk.Visible = true;
+            div_dn.Visible = false;
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            dn.Visible = true;
-            dk.Visible = false;
+            div_dn.Visible = true;
+            div_dk.Visible = false;
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            dn.Visible = false;
-            QMK.Visible = true;
+            div_dn.Visible = false;
+            div_qmk.Visible = true;
         }
 
         protected void Button8_Click(object sender, EventArgs e)
         {
-            dn.Visible = true;
-            QMK.Visible = false;
+            div_dn.Visible = true;
+            div_qmk.Visible = false;
         }
 
 
@@ -115,7 +118,7 @@ namespace LabGroup
 
             Session["tk"] = tbTK.Text;
 
-            Response.Redirect("");
+            Response.Redirect("GioHang.aspx");
         }
 
         protected void Button6_Click(object sender, EventArgs e)
@@ -206,8 +209,8 @@ namespace LabGroup
             Session["tk"] = Convert.ToString(cmd.ExecuteScalar());
             _conn.Close();
             lError.Text = "Cập nhật mật khẩu thành công!";
-            QMK.Visible = false;
-            dn.Visible = true;
+            div_qmk.Visible = false;
+            div_dn.Visible = true;
         }
 
         protected void Button7_Click(object sender, EventArgs e)

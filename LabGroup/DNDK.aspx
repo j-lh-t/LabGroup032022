@@ -9,7 +9,7 @@
     <title>Trang bắt đầu!</title>
     <style type="text/css">
         body{
-            background-color:gray;
+            background-color:rgb(225,225,225);
         }
         
         div{
@@ -22,12 +22,19 @@
         .auto-style2 {
             margin:auto;
             width:500px;
+            border-style:outset;
+            border-width:40px;
+            border-radius:50px;
         }
         .auto-style3 {
             width: 10px;
         }
         .auto-style4 {
             width: 200px;
+            text-align: left; 
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 17px; 
+            font-weight: bolder;
         }
         .auto-style5 {
             width: 10px;
@@ -37,20 +44,19 @@
             font-size: xx-large;
             text-transform: uppercase;
         }
-        .auto-style7 {
-            width: 10px;
-            height: 24px;
-        }
-        .auto-style8 {
-            height: 24px;
+        .auto-style9 {
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 17px;
+            font-weight: bolder;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server" class="auto-style1">
         <!--------------------------------------------Đăng nhập-------------------------------------------------------> 
-        <div class="auto-style2">
-            <asp:Panel ID="dn" runat="server" Width="500px" BorderStyle="Outset">
+        <div class="auto-style2" id="div_dn" runat="server">
+            <asp:Panel ID="dn" runat="server" Width="500px">
                 <div>
                     <br />
                     <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: xx-large; text-transform: uppercase;">Đăng nhập</h2>
@@ -64,14 +70,14 @@
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Tên người dùng:&nbsp;</td>
+                            <td class="auto-style4">&nbsp;Tên người dùng:&nbsp;</td>
                             <td>&nbsp;<asp:TextBox ID="tbTK" runat="server" BorderStyle="Dotted" Font-Size="17px" Width="90%"></asp:TextBox>
                             </td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Mật khẩu:&nbsp;</td>
+                            <td class="auto-style4">&nbsp;Mật khẩu:&nbsp;</td>
                             <td >&nbsp;<asp:TextBox ID="tbMK" runat="server" Width="90%" TextMode="Password" BorderStyle="Dotted" Font-Size="17px"></asp:TextBox>
                                 </td>
                             <td class="auto-style5">&nbsp;</td>
@@ -105,8 +111,8 @@
             </asp:Panel>
         </div>
         <!--------------------------------------------Đăng ký-------------------------------------------------------> 
-        <div class="auto-style2">
-            <asp:Panel ID="dk" runat="server" Width="500px" Visible="False" BorderStyle="Outset">
+        <div class="auto-style2" id="div_dk" runat="server">
+            <asp:Panel ID="dk" runat="server" Width="500px">
                 <div>
                     <br />
                     <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: xx-large; text-transform: uppercase;">Đăng ký</h2>
@@ -120,34 +126,34 @@
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Tên người dùng:&nbsp;</td>
+                            <td class="auto-style4">&nbsp;Tên người dùng:&nbsp;</td>
                             <td>&nbsp;<asp:TextBox ID="tbTK0" runat="server" BorderStyle="Dotted" Font-Size="17px" Width="90%"></asp:TextBox>
                             </td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;" class="auto-style4">&nbsp;Email:</td>
+                            <td class="auto-style4">&nbsp;Email:</td>
                             <td>&nbsp;<asp:TextBox ID="tbEmail0" runat="server" BorderStyle="Dotted" Font-Size="17px" TextMode="Email" Width="90%"></asp:TextBox>
                             </td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;" class="auto-style4">&nbsp;<asp:Button ID="Button5" runat="server" Text="Xác nhận mail" BackColor="White" BorderColor="#0066FF" BorderStyle="Solid" Font-Bold="True" Font-Italic="True" Font-Names="Courier New" Font-Size="17px" ForeColor="#0066FF" Width="180px" OnClick="Button5_Click" /></td>
+                            <td class="auto-style4">&nbsp;<asp:Button ID="Button5" runat="server" Text="Xác nhận mail" BackColor="White" BorderColor="#0066FF" BorderStyle="Solid" Font-Bold="True" Font-Italic="True" Font-Names="Courier New" Font-Size="17px" ForeColor="#0066FF" Width="180px" OnClick="Button5_Click" /></td>
                             <td>&nbsp;<asp:TextBox ID="tbXN0" runat="server" BorderStyle="Dotted" Font-Size="17px" Width="90%"></asp:TextBox>
                             </td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Mật khẩu:&nbsp;</td>
+                            <td class="auto-style4">&nbsp;Mật khẩu:&nbsp;</td>
                             <td >&nbsp;<asp:TextBox ID="tbMK0" runat="server" Width="90%" TextMode="Password" BorderStyle="Dotted" Font-Size="17px"></asp:TextBox></td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Mật khẩu xác nhận:</td>
+                            <td class="auto-style4">&nbsp;Mật khẩu xác nhận:</td>
                             <td >&nbsp;<asp:TextBox ID="tbMK00" runat="server" Width="90%" TextMode="Password" BorderStyle="Dotted" Font-Size="17px"></asp:TextBox><asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Mật khẩu không khớp!" ControlToCompare="tbMK0" ControlToValidate="tbMK00" Display="Dynamic" Font-Italic="True" ForeColor="Red"></asp:CompareValidator></td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
@@ -160,8 +166,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: left">
-                                &nbsp;</td>
+                            <td style="text-align: left">&nbsp;</td>
                             <td style="text-align: right">
                                 <asp:Button ID="Button6" runat="server" BackColor="Black" Font-Bold="True" Font-Italic="True" Font-Size="17px" Font-Strikeout="False" ForeColor="White" Text="Đăng ký" Width="150px" OnClick="Button6_Click" />
                                 &nbsp;</td>
@@ -178,22 +183,22 @@
             </asp:Panel>
         </div>
         <!--------------------------------------------Quên mật khẩu-------------------------------------------------------> 
-        <div class="auto-style2">
-            <asp:Panel ID="QMK" runat="server" Width="500px" Visible="False" BorderStyle="Outset">
+        <div class="auto-style2" id="div_qmk" runat="server">
+            <asp:Panel ID="QMK" runat="server" Width="500px">
                 <div>
                     <br />
                     <h2 class="auto-style6">Khôi phục mật khẩu</h2>
                     <table style="width: 100%;">
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: right; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;" colspan="2">
+                            <td class="auto-style9" colspan="2">
                                 <asp:Label ID="lError1" runat="server" Font-Italic="True" ForeColor="Red">Hãy lấy mã email trước khi nhập mật khẩu!</asp:Label>
                                 &nbsp; </td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;" class="auto-style4">&nbsp;Email:</td>
+                            <td class="auto-style4">&nbsp;Email:</td>
                             <td>&nbsp;<asp:TextBox ID="tbEmail1" runat="server" BorderStyle="Dotted" Font-Size="17px" TextMode="Email" Width="90%"></asp:TextBox>
                             </td>
                             <td class="auto-style5">&nbsp;</td>
@@ -207,13 +212,13 @@
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Mật khẩu mới:&nbsp;</td>
+                            <td class="auto-style4">&nbsp;Mật khẩu mới:&nbsp;</td>
                             <td >&nbsp;<asp:TextBox ID="tbMK1" runat="server" Width="90%" TextMode="Password" BorderStyle="Dotted" Font-Size="17px"></asp:TextBox></td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td class="auto-style4" style="text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 17px; font-weight: bolder;">&nbsp;Mật khẩu xác nhận:</td>
+                            <td class="auto-style4">&nbsp;Mật khẩu xác nhận:</td>
                             <td >&nbsp;<asp:TextBox ID="tbMK10" runat="server" Width="90%" TextMode="Password" BorderStyle="Dotted" Font-Size="17px"></asp:TextBox><asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Mật khẩu không khớp!" ControlToCompare="tbMK0" ControlToValidate="tbMK00" Display="Dynamic" Font-Italic="True" ForeColor="Red"></asp:CompareValidator></td>
                             <td class="auto-style5">&nbsp;</td>
                         </tr>
@@ -226,8 +231,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style3">&nbsp;</td>
-                            <td style="text-align: left">
-                                &nbsp;</td>
+                            <td style="text-align: left">&nbsp;</td>
                             <td style="text-align: right">
                                 <asp:Button ID="Button9" runat="server" BackColor="Black" Font-Bold="True" Font-Italic="True" Font-Size="17px" Font-Strikeout="False" ForeColor="White" Text="Gửi" Width="150px" OnClick="Button9_Click" />
                                 &nbsp;</td>
